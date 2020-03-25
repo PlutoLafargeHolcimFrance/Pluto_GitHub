@@ -1,0 +1,325 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project Name="Choisy_V1" Description="" LogLevel="ERROR">
+  <DiaporamaConfigurations />
+  <UserManagement>
+    <Users>
+      <User Id="4776b28a-cc4b-4351-a47b-613ce6f04ff1" Name="Administrator" Login="admin" Password="196056200014116189205058" />
+    </Users>
+    <Groups>
+      <Group Id="6bbff837-1ded-4c31-b82c-8be3d5d77a38" Name="Administrators" UserManagementRight="true" DataManagementRight="true" ReportEditorRight="true" ReportLiveRight="true" ReportViewerRight="true" WebPortalRight="true" WebMonitoringRight="true" OnDemandReportGenerationRight="true" DeleteReportRight="true" WebAnalyticRight="true">
+        <UserList>
+          <User Id="4776b28a-cc4b-4351-a47b-613ce6f04ff1" Name="Administrator" Login="admin" Password="196056200014116189205058" />
+        </UserList>
+      </Group>
+    </Groups>
+  </UserManagement>
+  <Users>
+    <User Id="00000000-0000-0000-0000-000000000000" username="admin" password="pluto" isAdministrator="true" culture="en-US" />
+  </Users>
+  <DataSources>
+    <RealtimeDataSources />
+    <HistoryDataSources />
+  </DataSources>
+  <Logger>
+    <StatisticConfiguration>
+      <Resources>
+        <StatisticResourceFolder Name="AllGroups" Path="AllGroups" />
+      </Resources>
+      <Expressions />
+    </StatisticConfiguration>
+    <Groups HistoryPreviewRefreshTime="00:00:10" HistoryPreviewMaxCount="100" />
+    <Alarms IsInhibited="False">
+      <Configuration>
+        <Fields />
+      </Configuration>
+      <AlarmDefinitions />
+    </Alarms>
+    <DataExportConfiguration />
+  </Logger>
+  <EventTriggerDefinitions>
+    <EventTriggerDefinition Name="EveryHour" Id="d623a7d9-55a5-4b63-9b3c-bd3125f36e42">
+      <Schedules>
+        <EveryEventSchedule Id="7e220e75-4e1f-4dc3-9dad-110a5a6b690b">
+          <StartDate>01/30/2019 00:00:00</StartDate>
+          <TimeSpan>01:00:00</TimeSpan>
+        </EveryEventSchedule>
+      </Schedules>
+    </EventTriggerDefinition>
+    <EventTriggerDefinition Name="EveryDay" Id="3d528485-663f-43de-9f01-468036e22f34">
+      <Schedules>
+        <DailyEventSchedule Id="5397d7fb-707d-421d-b657-418e247f2fc8">
+          <StartDate>01/30/2019 00:00:00</StartDate>
+          <RepeatEvery>1</RepeatEvery>
+          <TimeSpans>
+            <TimeSpan>12:00:00</TimeSpan>
+          </TimeSpans>
+        </DailyEventSchedule>
+      </Schedules>
+    </EventTriggerDefinition>
+  </EventTriggerDefinitions>
+  <DifferedExecutionDefinitions />
+  <ReportGenerations>
+    <ReportGenerationDefinition Name="None" Id="d9f97ac5-a04e-4213-bd74-c4bb12b9a6b1" />
+    <ReportGenerationDefinition Name="EveryHour" Id="e4cdc98a-eb77-4725-b17b-a903ece96be8">
+      <Schedules>
+        <EveryEventSchedule Id="28bf033e-cb9d-4a7c-8a74-e8ed3312ab0e">
+          <StartDate>01/30/2019 00:00:00</StartDate>
+          <TimeSpan>01:00:00</TimeSpan>
+        </EveryEventSchedule>
+      </Schedules>
+    </ReportGenerationDefinition>
+    <ReportGenerationDefinition Name="EveryDay" Id="46fac6fe-866c-4f24-be1f-83f85def2513">
+      <Schedules>
+        <DailyEventSchedule Id="a1d9d92e-a8c4-447d-bf27-08cfbed92c6b">
+          <StartDate>01/30/2019 00:00:00</StartDate>
+          <RepeatEvery>1</RepeatEvery>
+          <TimeSpans>
+            <TimeSpan>12:00:00</TimeSpan>
+          </TimeSpans>
+        </DailyEventSchedule>
+      </Schedules>
+    </ReportGenerationDefinition>
+    <ReportGenerationDefinition Name="EveryMonth" Id="6a05135a-66bc-4561-be28-0ec439a24e5a">
+      <Schedules>
+        <MonthlyEventSchedule Id="0b736408-5303-4dbd-afd8-b07b0177fe41">
+          <StartDate>01/01/2019 00:00:00</StartDate>
+          <DayType>DayOfTheMonth</DayType>
+          <RepeatEvery>1</RepeatEvery>
+        </MonthlyEventSchedule>
+      </Schedules>
+    </ReportGenerationDefinition>
+  </ReportGenerations>
+  <StorageLocations>
+    <StorageLocation Id="1cbd1c02-112d-4ec0-ad2b-6673fd944651" Name="Reports">
+      <ServerPath>.\Projects\Reports</ServerPath>
+    </StorageLocation>
+  </StorageLocations>
+  <SmartBrowsing />
+  <ReportsDefinition />
+  <EmailingConfiguration FromName="" FromEmail="" EmailServerType="SMTP" SmtpServer="" EmailServerPort="25" SmtpLogin="" SmtpPassword="" />
+  <TimePeriods>
+    <FirstDayOfWeek>Monday</FirstDayOfWeek>
+    <CalendarWeekRule>FirstFourDayWeek</CalendarWeekRule>
+    <TimePeriod Mode="CurrentPeriod" Id="087226a4-c6af-4003-9f24-bb848919a739" Name="Current 10 Minutes">
+      <EditableInRuntime>False</EditableInRuntime>
+      <EditedInRuntime>False</EditedInRuntime>
+      <EditedStartDate>01/01/0001 00:00:00</EditedStartDate>
+      <EditedEndDate>01/01/0001 00:00:00</EditedEndDate>
+      <Period Value="10" ForceEndDate="False">Minute</Period>
+    </TimePeriod>
+    <TimePeriod Mode="LastPeriod" Id="d01dfaa4-cfd0-4809-94cd-79f5cce4aaf5" Name="Last 10 Minutes">
+      <EditableInRuntime>False</EditableInRuntime>
+      <EditedInRuntime>False</EditedInRuntime>
+      <EditedStartDate>01/01/0001 00:00:00</EditedStartDate>
+      <EditedEndDate>01/01/0001 00:00:00</EditedEndDate>
+      <Period StartTimeSpan="00:00:00" EndTimeSpan="00:00:00" EndTimeSpanOperator="Add" Value="10" Offset="11">Minute</Period>
+    </TimePeriod>
+    <TimePeriod Mode="CurrentPeriod" Id="09d4d54b-4c12-46ce-bd4f-13036e1e9b88" Name="Current Hour">
+      <EditableInRuntime>False</EditableInRuntime>
+      <EditedInRuntime>False</EditedInRuntime>
+      <EditedStartDate>01/01/0001 00:00:00</EditedStartDate>
+      <EditedEndDate>01/01/0001 00:00:00</EditedEndDate>
+      <Period ForceEndDate="False">Hour</Period>
+    </TimePeriod>
+    <TimePeriod Mode="LastPeriod" Id="a3dd2023-9bad-4686-98a4-fd72c1dfe852" Name="Last Hour">
+      <EditableInRuntime>False</EditableInRuntime>
+      <EditedInRuntime>False</EditedInRuntime>
+      <EditedStartDate>01/01/0001 00:00:00</EditedStartDate>
+      <EditedEndDate>01/01/0001 00:00:00</EditedEndDate>
+      <Period StartTimeSpan="00:00:00" EndTimeSpan="00:00:00" EndTimeSpanOperator="Add" Value="1" Offset="2">Hour</Period>
+    </TimePeriod>
+    <TimePeriod Mode="CurrentPeriod" Id="9a1691be-6fcf-4e81-bc02-cc20b6f7aee5" Name="Current Day">
+      <EditableInRuntime>False</EditableInRuntime>
+      <EditedInRuntime>False</EditedInRuntime>
+      <EditedStartDate>01/01/0001 00:00:00</EditedStartDate>
+      <EditedEndDate>01/01/0001 00:00:00</EditedEndDate>
+      <Period ForceEndDate="False">Day</Period>
+    </TimePeriod>
+    <TimePeriod Mode="LastPeriod" Id="49d1b8e5-0171-462b-8637-fea86d050c76" Name="Last Day">
+      <EditableInRuntime>False</EditableInRuntime>
+      <EditedInRuntime>False</EditedInRuntime>
+      <EditedStartDate>01/01/0001 00:00:00</EditedStartDate>
+      <EditedEndDate>01/01/0001 00:00:00</EditedEndDate>
+      <Period StartTimeSpan="00:00:00" EndTimeSpan="00:00:00" EndTimeSpanOperator="Add" Value="1" Offset="2">Day</Period>
+    </TimePeriod>
+    <TimePeriod Mode="CurrentPeriod" Id="5eb717fd-1f9b-4635-912c-b609874f7e25" Name="Current Week">
+      <EditableInRuntime>False</EditableInRuntime>
+      <EditedInRuntime>False</EditedInRuntime>
+      <EditedStartDate>01/01/0001 00:00:00</EditedStartDate>
+      <EditedEndDate>01/01/0001 00:00:00</EditedEndDate>
+      <Period ForceEndDate="False">Week</Period>
+    </TimePeriod>
+    <TimePeriod Mode="LastPeriod" Id="71e8e621-2560-4193-80cf-3cdf1629a6ba" Name="Last Week">
+      <EditableInRuntime>False</EditableInRuntime>
+      <EditedInRuntime>False</EditedInRuntime>
+      <EditedStartDate>01/01/0001 00:00:00</EditedStartDate>
+      <EditedEndDate>01/01/0001 00:00:00</EditedEndDate>
+      <Period StartTimeSpan="00:00:00" EndTimeSpan="00:00:00" EndTimeSpanOperator="Add" Value="1" Offset="2">Week</Period>
+    </TimePeriod>
+    <TimePeriod Mode="CurrentPeriod" Id="e8723982-4d44-40da-a172-de00a585740f" Name="Current Month">
+      <EditableInRuntime>False</EditableInRuntime>
+      <EditedInRuntime>False</EditedInRuntime>
+      <EditedStartDate>01/01/0001 00:00:00</EditedStartDate>
+      <EditedEndDate>01/01/0001 00:00:00</EditedEndDate>
+      <Period ForceEndDate="False">Month</Period>
+    </TimePeriod>
+    <TimePeriod Mode="LastPeriod" Id="08dd4ad8-74ec-4cd6-8545-96b96415be85" Name="Last Month">
+      <EditableInRuntime>False</EditableInRuntime>
+      <EditedInRuntime>False</EditedInRuntime>
+      <EditedStartDate>01/01/0001 00:00:00</EditedStartDate>
+      <EditedEndDate>01/01/0001 00:00:00</EditedEndDate>
+      <Period StartTimeSpan="00:00:00" EndTimeSpan="00:00:00" EndTimeSpanOperator="Add" Value="1" Offset="2">Month</Period>
+    </TimePeriod>
+    <TimePeriod Mode="CurrentPeriod" Id="c43b1516-04fd-4596-948e-2047b4bca1d7" Name="Current Year">
+      <EditableInRuntime>False</EditableInRuntime>
+      <EditedInRuntime>False</EditedInRuntime>
+      <EditedStartDate>01/01/0001 00:00:00</EditedStartDate>
+      <EditedEndDate>01/01/0001 00:00:00</EditedEndDate>
+      <Period ForceEndDate="False">Year</Period>
+    </TimePeriod>
+    <TimePeriod Mode="LastPeriod" Id="4991a309-21c5-4caf-a043-6edd1b2f353e" Name="Last Year">
+      <EditableInRuntime>False</EditableInRuntime>
+      <EditedInRuntime>False</EditedInRuntime>
+      <EditedStartDate>01/01/0001 00:00:00</EditedStartDate>
+      <EditedEndDate>01/01/0001 00:00:00</EditedEndDate>
+      <Period StartTimeSpan="00:00:00" EndTimeSpan="00:00:00" EndTimeSpanOperator="Add" Value="1" Offset="2">Year</Period>
+    </TimePeriod>
+  </TimePeriods>
+  <AlarmFilters />
+  <DtFilters>
+    <DtFilter Id="629861bf-63b2-4a7d-8c0e-7059aa1b72ad" Name="BAD QUALITY" Description="" Filter="{#CurrentTag#} &lt;= 20 OR {#CurrentTag#} &gt;= 80" DayOffsFilter="NotSet">
+      <WeekFilters />
+    </DtFilter>
+    <DtFilter Id="a48fcd1d-d790-429b-8324-8e0b882c5eb7" Name="MEDIUM QUALITY" Description="" Filter="( {#CurrentTag#} &gt; 20 AND {#CurrentTag#} &lt;= 30) OR ( {#CurrentTag#} &gt;=70 AND {#CurrentTag#} &lt; 80 )" DayOffsFilter="NotSet">
+      <WeekFilters />
+    </DtFilter>
+    <DtFilter Id="8ebcf823-720b-47d8-b227-33d8f899bed1" Name="BAD QUALITY" Description="" Filter="{#CurrentTag#} &gt; 30 AND {#CurrentTag#} &lt; 70" DayOffsFilter="NotSet">
+      <WeekFilters />
+    </DtFilter>
+    <DtFilter Id="27b033d2-9c3b-4da7-a0bc-8249285c9bfe" Name="WORKING HOURS" Description="" Filter="" DayOffsFilter="NotSet">
+      <WeekFilters>
+        <WeekFilter IsMonday="true" IsTuesday="true" IsWednesday="true" IsThursday="true" IsFriday="true" IsSaturday="false" IsSunday="false" StartHour="8" EndHour="18" IsInsideMode="true" IsAlways="true" />
+      </WeekFilters>
+    </DtFilter>
+    <DtFilter Id="5525b714-f30b-4911-a7be-da1c865b7334" Name="NON WORKING HOURS" Description="" Filter="" DayOffsFilter="NotSet">
+      <WeekFilters>
+        <WeekFilter IsMonday="true" IsTuesday="true" IsWednesday="true" IsThursday="true" IsFriday="true" IsSaturday="false" IsSunday="false" StartHour="0" EndHour="8" IsInsideMode="true" IsAlways="true" />
+        <WeekFilter IsMonday="true" IsTuesday="true" IsWednesday="true" IsThursday="true" IsFriday="true" IsSaturday="false" IsSunday="false" StartHour="18" EndHour="24" IsInsideMode="true" IsAlways="true" />
+        <WeekFilter IsMonday="false" IsTuesday="false" IsWednesday="false" IsThursday="false" IsFriday="false" IsSaturday="false" IsSunday="true" StartHour="0" EndHour="24" IsInsideMode="true" IsAlways="true" />
+      </WeekFilters>
+    </DtFilter>
+  </DtFilters>
+  <ExternalAlarmFieldValues />
+  <ExternalAlarmNameValues />
+  <LiveMode>
+    <RefreshRate>00:00:10</RefreshRate>
+    <LastUpdateFormat>dd/MM/yyyy HH:mm:ss</LastUpdateFormat>
+  </LiveMode>
+  <AnimatedItemConfiguration>
+    <AnimatedItem Id="c4f9ff0e-39c2-402e-ac64-276b6ccd1e70" Name="GRADIENT" Description="">
+      <ValueRange>
+        <MinValue>0</MinValue>
+        <MaxValue>20</MaxValue>
+        <MinValueOperator>&lt;=</MinValueOperator>
+        <MaxValueOperator>&lt;=</MaxValueOperator>
+        <BackgroundColor>#FFC4E62D</BackgroundColor>
+      </ValueRange>
+      <ValueRange>
+        <MinValue>20</MinValue>
+        <MaxValue>40</MaxValue>
+        <MinValueOperator>&lt;=</MinValueOperator>
+        <MaxValueOperator>&lt;=</MaxValueOperator>
+        <BackgroundColor>#FFD8E62D</BackgroundColor>
+      </ValueRange>
+      <ValueRange>
+        <MinValue>40</MinValue>
+        <MaxValue>60</MaxValue>
+        <MinValueOperator>&lt;=</MinValueOperator>
+        <MaxValueOperator>&lt;=</MaxValueOperator>
+        <BackgroundColor>#FFE6C82D</BackgroundColor>
+      </ValueRange>
+      <ValueRange>
+        <MinValue>60</MinValue>
+        <MaxValue>70</MaxValue>
+        <MinValueOperator>&lt;=</MinValueOperator>
+        <MaxValueOperator>&lt;=</MaxValueOperator>
+        <BackgroundColor>#FFE69E2D</BackgroundColor>
+      </ValueRange>
+      <ValueRange>
+        <MinValue>70</MinValue>
+        <MaxValue>80</MaxValue>
+        <MinValueOperator>&lt;=</MinValueOperator>
+        <MaxValueOperator>&lt;=</MaxValueOperator>
+        <BackgroundColor>#FFE6892D</BackgroundColor>
+      </ValueRange>
+      <ValueRange>
+        <MinValue>80</MinValue>
+        <MaxValue>90</MaxValue>
+        <MinValueOperator>&lt;=</MinValueOperator>
+        <MaxValueOperator>&lt;=</MaxValueOperator>
+        <BackgroundColor>#FFE65F2D</BackgroundColor>
+      </ValueRange>
+      <ValueRange>
+        <MinValue>90</MinValue>
+        <MaxValue>100</MaxValue>
+        <MinValueOperator>&lt;=</MinValueOperator>
+        <MaxValueOperator>&lt;=</MaxValueOperator>
+        <BackgroundColor>#FFE62D2D</BackgroundColor>
+      </ValueRange>
+    </AnimatedItem>
+    <AnimatedItem Id="1a27ad91-7556-43b3-9577-d1b933cc86b1" Name="QUALITY" Description="">
+      <ValueRange>
+        <MinValue>0</MinValue>
+        <MaxValue>20</MaxValue>
+        <MinValueOperator>&lt;=</MinValueOperator>
+        <MaxValueOperator>&lt;=</MaxValueOperator>
+        <BackgroundColor>#FFD3190B</BackgroundColor>
+      </ValueRange>
+      <ValueRange>
+        <MinValue>20</MinValue>
+        <MaxValue>30</MaxValue>
+        <MinValueOperator>&lt;=</MinValueOperator>
+        <MaxValueOperator>&lt;=</MaxValueOperator>
+        <BackgroundColor>#FFFFFC3B</BackgroundColor>
+      </ValueRange>
+      <ValueRange>
+        <MinValue>30</MinValue>
+        <MaxValue>70</MaxValue>
+        <MinValueOperator>&lt;=</MinValueOperator>
+        <MaxValueOperator>&lt;=</MaxValueOperator>
+        <BackgroundColor>#FF9BB900</BackgroundColor>
+      </ValueRange>
+      <ValueRange>
+        <MinValue>70</MinValue>
+        <MaxValue>80</MaxValue>
+        <MinValueOperator>&lt;=</MinValueOperator>
+        <MaxValueOperator>&lt;=</MaxValueOperator>
+        <BackgroundColor>#FFFFFC3B</BackgroundColor>
+      </ValueRange>
+      <ValueRange>
+        <MinValue>80</MinValue>
+        <MaxValue>100</MaxValue>
+        <MinValueOperator>&lt;=</MinValueOperator>
+        <MaxValueOperator>&lt;=</MaxValueOperator>
+        <BackgroundColor>#FFD3190B</BackgroundColor>
+      </ValueRange>
+    </AnimatedItem>
+    <AnimatedItem Id="f6641fd9-3ab7-4ac4-b877-74dae46a1369" Name="ON OFF" Description="">
+      <ValueRange>
+        <MinValue>0</MinValue>
+        <MaxValue>0</MaxValue>
+        <MinValueOperator>&lt;=</MinValueOperator>
+        <MaxValueOperator>&lt;=</MaxValueOperator>
+        <BackgroundColor>#FFF44336</BackgroundColor>
+      </ValueRange>
+      <ValueRange>
+        <MinValue>1</MinValue>
+        <MaxValue>1</MaxValue>
+        <MinValueOperator>&lt;=</MinValueOperator>
+        <MaxValueOperator>&lt;=</MaxValueOperator>
+        <BackgroundColor>#FF8BC34A</BackgroundColor>
+      </ValueRange>
+    </AnimatedItem>
+  </AnimatedItemConfiguration>
+  <DayOffs />
+</Project>
